@@ -1,0 +1,112 @@
+/* Romantic Gradient Background */
+body {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffe5ef, #ffd6f3, #ffeaf7);
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1.8s ease-in-out;
+  overflow-x: hidden;
+}
+
+/* Title Styling */
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  font-weight: 700;
+  color: #d81b60;
+  margin-top: 30px;
+  text-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+  animation: slideUp 1.3s ease;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 18px;
+  color: #6b445f;
+  margin-bottom: 30px;
+  font-weight: 300;
+  animation: fadeIn 2s ease;
+}
+
+/* Recording Box */
+.recording {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  margin: 25px auto;
+  padding: 22px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+  animation: slideUp 1s ease;
+}
+
+/* Hover Glow */
+.recording:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(255, 110, 160, 0.4);
+}
+
+/* Recording Title */
+.recording h2 {
+  color: #c2185b;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Audio Player */
+audio {
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Intro Message */
+.intro-message {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  margin-top: 20px;
+  color: #c2185b;
+  animation: fadeIn 2.2s ease;
+}
+
+/* Fade-In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Hearts Animation */
+.hearts::before,
+.hearts::after {
+  content: "❤";
+  position: absolute;
+  top: -20px;
+  font-size: 28px;
+  color: rgba(255, 120, 160, 0.7);
+  animation: floatHeart 6s infinite ease-in-out;
+}
+
+.hearts::after {
+  left: 80%;
+  animation-delay: 3s;
+}
+
+.hearts::before {
+  left: 20%;
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  50% { transform: translateY(200px) rotate(20deg); opacity: 0.6; }
+  100% { transform: translateY(400px) rotate(-20deg); opacity: 0; }
+}
